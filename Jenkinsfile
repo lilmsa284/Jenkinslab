@@ -3,16 +3,10 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/lilmsa284/Jenkinslab.git'
-            }
-        }
-
         stage('Build & Test') {
             steps {
-                sh 'javac Main.java'
-                sh 'java Main'
+                sh 'javac main.java'
+                sh 'java main'
             }
         }
 
